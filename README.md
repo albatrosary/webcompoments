@@ -6,6 +6,55 @@ Web Compoments
 https://developer.mozilla.org/en-US/docs/Web/API/Document/registerElement
 http://www.html5rocks.com/ja/tutorials/webcomponents/customelements/
 
+### カスタムタグをインスタンス化
+
+#### 宣言
+
+```html
+<x-foo></x-foo>
+```
+
+#### JavaScript で DOM を生成
+
+```JavaScript
+var xFoo = document.createElement('x-foo');
+xFoo.addEventListener('click', function(e) {
+  alert('Thanks!');
+});
+```
+
+#### new オペレーター
+
+```JavaScript
+var xFoo = new XFoo();
+document.body.appendChild(xFoo);
+```
+
+### 型拡張要素をインスタンス化する
+
+#### 宣言する
+
+```html
+<!-- <button> "is a" mega button -->
+<button is="mega-button">
+```
+
+#### JavaScript で DOM を生成
+
+```JavaScript
+var megaButton = document.createElement('button', 'mega-button');
+// megaButton instanceof MegaButton === true
+```
+
+#### new オペレーター
+
+```JavaScript
+var megaButton = new MegaButton();
+document.body.appendChild(megaButton);
+```
+
+### サンプル
+
 ```JavaScript
 var Mytag = document.registerElement('my-tag');
 document.body.appendChild(new Mytag());

@@ -6,6 +6,12 @@ Web Compoments
 https://developer.mozilla.org/en-US/docs/Web/API/Document/registerElement
 http://www.html5rocks.com/ja/tutorials/webcomponents/customelements/
 
+### 新しい要素を登録する
+
+```JavaScript
+var XFoo = document.registerElement('x-foo');
+```
+
 ### カスタムタグをインスタンス化
 
 #### 宣言

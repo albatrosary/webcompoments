@@ -1,6 +1,10 @@
 Web Compoments
 ============
 
+# Intro
+
+https://extensiblewebmanifesto.org/
+
 # Custom Elements
 
 https://developer.mozilla.org/en-US/docs/Web/API/Document/registerElement
